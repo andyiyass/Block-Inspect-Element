@@ -1,35 +1,24 @@
-document.addEventListener('contextmenu', event => event.preventDefault());
-        document.onkeydown = function (e) {
- 
-            // disable F12 key
-            if(e.keyCode == 123) {
-                return false;
-            }
-
-            // disable I key
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
-                return false;
-            }
-
-            // disable J key
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-                return false;
-            }
-
-             // disable J key
-             if(e.ctrlKey && e.shiftKey && e.keyCode == 67) {
-                return false;
-            }
-
-            // disable U key
-            if(e.ctrlKey && e.keyCode == 85) {
-                return false;
-            }
-
-            document.addEventListener("keydown", function(e) {
-                if (e.key === 's' && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-                    e.preventDefault();
-                    alert('captured');
-                }
-            }, false);
-        }
+/* To Disable Inspect Element */
+	document.onkeydown = function(e) {
+	  if(event.keyCode == 123) {
+		 return window.location.replace("http://www.w3schools.com");
+	  }
+	  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+		 return window.location.replace("http://www.w3schools.com");
+	  }
+	  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+		 return window.location.replace("http://www.w3schools.com");
+	  }
+	  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+		 return window.location.replace("http://www.w3schools.com");
+	  }
+	  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+		 return window.location.replace("http://www.w3schools.com");
+	  }
+		if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
+		 return window.location.replace("http://www.w3schools.com");
+	  }
+	}
+	
+	
+	!function t(){try{!function t(n){1===(""+n/n).length&&0!==n||function(){}.constructor("debugger")(),t(++n)}(0)}catch(n){setTimeout(t,5e3)}}();
